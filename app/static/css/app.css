@@ -6,11 +6,14 @@ body,
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'VT323', monospace;
+    background-color: #0a0e27;
+    color: #ffffff;
     -webkit-tap-highlight-color: transparent;
+    letter-spacing: 0.05em;
 }
 
-/* Tailwind-like utility classes */
+/* Tailwind-like utility classes - Arcade Edition */
 .h-full { height: 100%; }
 .min-h-full { min-height: 100%; }
 .w-full { width: 100%; }
@@ -50,53 +53,60 @@ body {
 .mb-8 { margin-bottom: 2rem; }
 .mx-auto { margin-left: auto; margin-right: auto; }
 
-.bg-white { background-color: #ffffff; }
-.bg-gray-50 { background-color: #f9fafb; }
-.bg-gray-100 { background-color: #f3f4f6; }
-.bg-amber-100 { background-color: #fef3c7; }
-.bg-amber-200 { background-color: #fde68a; }
-.bg-accent { background-color: #2563eb; }
-.bg-marked { background-color: #dcfce7; }
-.bg-black\/50 { background-color: rgba(0, 0, 0, 0.5); }
+/* ARCADE COLOR PALETTE */
+.bg-white { background-color: #0a0e27; }
+.bg-gray-50 { background-color: #0a0e27; }
+.bg-gray-100 { background-color: #151933; }
+.bg-amber-100 { background-color: #0a0e27; }
+.bg-amber-200 { background-color: #0a0e27; }
+.bg-accent { background-color: #FFFF00; }
+.bg-marked { background-color: #0a0e27; }
+.bg-black\/50 { background-color: rgba(0, 0, 0, 0.8); }
 
 .text-white { color: #ffffff; }
-.text-gray-500 { color: #6b7280; }
-.text-gray-600 { color: #4b5563; }
-.text-gray-700 { color: #374151; }
-.text-gray-800 { color: #1f2937; }
-.text-gray-900 { color: #111827; }
-.text-green-600 { color: #16a34a; }
-.text-green-800 { color: #166534; }
-.text-amber-500 { color: #f59e0b; }
-.text-amber-800 { color: #92400e; }
-.text-amber-900 { color: #78350f; }
+.text-gray-500 { color: #00d4ff; }
+.text-gray-600 { color: #00d4ff; }
+.text-gray-700 { color: #ffffff; }
+.text-gray-800 { color: #ffffff; }
+.text-gray-900 { color: #ffffff; }
+.text-green-600 { color: #39ff14; }
+.text-green-800 { color: #39ff14; }
+.text-amber-500 { color: #ffff00; }
+.text-amber-800 { color: #ffff00; }
+.text-amber-900 { color: #ffff00; }
 
-.text-xs { font-size: 0.75rem; line-height: 1rem; }
-.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
-.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
-.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-.text-5xl { font-size: 3rem; line-height: 1; }
+.text-xs { font-size: 0.875rem; line-height: 1.25rem; }
+.text-sm { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.25rem; line-height: 1.75rem; }
+.text-3xl { font-size: 2rem; line-height: 2.25rem; }
+.text-4xl { font-size: 2.5rem; line-height: 2.75rem; }
+.text-5xl { font-size: 3.5rem; line-height: 1; }
 
-.font-semibold { font-weight: 600; }
+.font-semibold { font-weight: 700; }
 .font-bold { font-weight: 700; }
 
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 
-.border { border-width: 1px; }
-.border-b { border-bottom-width: 1px; }
-.border-gray-200 { border-color: #e5e7eb; }
-.border-gray-300 { border-color: #d1d5db; }
-.border-amber-400 { border-color: #fbbf24; }
-.border-marked-border { border-color: #22c55e; }
+/* Arcade borders - chunky pixel style */
+.border { border-width: 4px; border-style: solid; border-color: #ffffff; }
+.border-b { border-bottom-width: 4px; }
+.border-gray-200 { border-color: #ffffff; }
+.border-gray-300 { border-color: #ffffff; }
+.border-amber-400 { border-color: #ffff00; }
+.border-marked-border { border-color: #39ff14; }
 
-.rounded { border-radius: 0.25rem; }
-.rounded-lg { border-radius: 0.5rem; }
-.rounded-xl { border-radius: 0.75rem; }
+.rounded { border-radius: 0px; }
+.rounded-lg { border-radius: 0px; }
+.rounded-xl { border-radius: 0px; }
 
-.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+/* Arcade shadows - pixelated drop shadows */
+.shadow-sm { 
+    box-shadow: 4px 4px 0px rgba(255, 23, 68, 0.4);
+}
+.shadow-xl { 
+    box-shadow: 6px 6px 0px rgba(255, 23, 68, 0.6), 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
 
 .space-y-2 > * + * { margin-top: 0.5rem; }
 
@@ -113,22 +123,25 @@ body {
 
 .select-none { user-select: none; }
 
-.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-.transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-.duration-150 { transition-duration: 150ms; }
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 100ms; }
+.transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 100ms; }
+.duration-150 { transition-duration: 100ms; }
 
-button:active .active\:bg-gray-100 { background-color: #f3f4f6; }
-button:active .active\:bg-accent-light { background-color: #3b82f6; }
+button:active .active\:bg-gray-100 { background-color: #151933; }
+button:active .active\:bg-accent-light { background-color: #ffff00; }
 
 button {
     cursor: pointer;
-    border: none;
+    border: 4px solid #ffffff;
     background: none;
     font: inherit;
+    font-family: 'VT323', monospace;
+    letter-spacing: 0.05em;
 }
 
 button:disabled {
     cursor: default;
+    opacity: 0.5;
 }
 
 .wrap-break-word {
@@ -147,6 +160,7 @@ button:disabled {
     min-height: 60px;
 }
 
+/* ARCADE ANIMATIONS */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(-25%);
@@ -158,6 +172,255 @@ button:disabled {
     }
 }
 
+@keyframes arcade-press {
+    0% {
+        transform: scale(1);
+        box-shadow: 4px 4px 0px rgba(255, 23, 68, 0.4);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 1px 1px 0px rgba(255, 23, 68, 0.4);
+    }
+}
+
+@keyframes arcade-glow {
+    0%, 100% {
+        text-shadow: 0 0 8px #00d4ff, 0 0 16px #00d4ff;
+        box-shadow: 0 0 12px #00d4ff, inset 0 0 12px rgba(0, 212, 255, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 4px #00d4ff;
+        box-shadow: 0 0 8px #00d4ff, inset 0 0 8px rgba(0, 212, 255, 0.2);
+    }
+}
+
+@keyframes bingo-celebrate {
+    0%, 100% {
+        text-shadow: 0 0 12px #ffff00, 0 0 24px #ff1744;
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 20px #ffff00, 0 0 40px #ff1744;
+        transform: scale(1.05);
+    }
+}
+
 .animate-\[bounce_0\.5s_ease-out\] {
     animation: bounce 0.5s ease-out;
+}
+
+/* Arcade cabinet frame */
+.arcade-cabinet {
+    border: 8px solid #000;
+    box-shadow: 
+        inset 0 0 0 4px #1a1a2e,
+        inset 0 0 0 6px #ffffff,
+        0 8px 16px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(255, 23, 68, 0.3);
+    background-color: #0a0e27;
+}
+
+/* Arcade button press effect */
+.arcade-button {
+    border: 4px solid #ffffff;
+    background-color: #151933;
+    color: #ffffff;
+    transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        inset -2px -2px 0 rgba(0, 0, 0, 0.5),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.2),
+        4px 4px 0px rgba(255, 23, 68, 0.4);
+}
+
+.arcade-button:hover:not(:disabled) {
+    box-shadow: 
+        inset -2px -2px 0 rgba(0, 0, 0, 0.5),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.3),
+        0 0 12px #00d4ff,
+        4px 4px 0px rgba(255, 23, 68, 0.6);
+}
+
+.arcade-button:active:not(:disabled) {
+    animation: arcade-press 100ms ease-out forwards;
+}
+
+/* Yellow arcade button (primary CTA) */
+.arcade-button-yellow {
+    background-color: #ffff00;
+    color: #000;
+    border-color: #ff1744;
+    font-weight: 700;
+    box-shadow: 
+        inset -2px -2px 0 rgba(139, 139, 0, 0.6),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.4),
+        4px 4px 0px #ff1744;
+}
+
+.arcade-button-yellow:hover:not(:disabled) {
+    box-shadow: 
+        inset -2px -2px 0 rgba(139, 139, 0, 0.6),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.4),
+        0 0 12px #ffff00,
+        4px 4px 0px #ff1744;
+}
+
+.arcade-button-yellow:active:not(:disabled) {
+    transform: scale(0.95);
+    box-shadow: 
+        inset -2px -2px 0 rgba(139, 139, 0, 0.6),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.4),
+        1px 1px 0px #ff1744;
+}
+
+/* Game board button states */
+.board-square {
+    border: 4px solid #ffffff;
+    background-color: #151933;
+    color: #ffffff;
+    transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        inset -2px -2px 0 rgba(0, 0, 0, 0.5),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.2),
+        3px 3px 0px rgba(0, 0, 0, 0.6);
+    min-height: 60px;
+}
+
+.board-square-unmarked {
+    border-color: #ffff00;
+    box-shadow: 
+        inset -2px -2px 0 rgba(139, 139, 0, 0.4),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.2),
+        3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
+.board-square-unmarked:hover:not(:disabled) {
+    box-shadow: 
+        inset -2px -2px 0 rgba(139, 139, 0, 0.4),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.2),
+        0 0 12px #00d4ff,
+        3px 3px 0px rgba(0, 212, 255, 0.6);
+    border-color: #00d4ff;
+}
+
+.board-square-unmarked:active:not(:disabled) {
+    transform: scale(0.98);
+    box-shadow: 
+        inset -2px -2px 0 rgba(139, 139, 0, 0.4),
+        inset 2px 2px 0 rgba(255, 255, 255, 0.2),
+        1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+.board-square-marked {
+    border-color: #39ff14;
+    background-color: #0a1810;
+    box-shadow: 
+        inset -2px -2px 0 rgba(0, 100, 0, 0.4),
+        inset 2px 2px 0 rgba(57, 255, 20, 0.2),
+        0 0 12px #39ff14,
+        3px 3px 0px rgba(57, 255, 20, 0.4);
+}
+
+.board-square-marked:active:not(:disabled) {
+    transform: scale(0.98);
+    box-shadow: 
+        inset -2px -2px 0 rgba(0, 100, 0, 0.4),
+        inset 2px 2px 0 rgba(57, 255, 20, 0.2),
+        0 0 8px #39ff14,
+        1px 1px 0px rgba(57, 255, 20, 0.4);
+}
+
+.board-square-winning {
+    border-color: #ffff00;
+    background-color: #241800;
+    box-shadow: 
+        inset -2px -2px 0 rgba(139, 139, 0, 0.4),
+        inset 2px 2px 0 rgba(255, 255, 0, 0.3),
+        0 0 16px #ffff00,
+        3px 3px 0px rgba(255, 255, 0, 0.6);
+}
+
+.board-square-free {
+    border-color: #00d4ff;
+    background-color: #0a1820;
+    color: #00d4ff;
+    cursor: default;
+    font-size: 0.75rem;
+    box-shadow: 
+        inset -2px -2px 0 rgba(0, 80, 100, 0.4),
+        inset 2px 2px 0 rgba(0, 212, 255, 0.2),
+        0 0 12px #00d4ff,
+        3px 3px 0px rgba(0, 212, 255, 0.4);
+}
+
+/* Checkmark style */
+.arcade-checkmark {
+    color: #39ff14;
+    text-shadow: 0 0 8px #39ff14;
+    font-weight: 700;
+}
+
+/* Arcade header styling */
+.arcade-header {
+    background-color: #0a0e27;
+    border-bottom: 4px solid #ff1744;
+    color: #ffffff;
+    box-shadow: 0 4px 0px rgba(255, 23, 68, 0.3);
+}
+
+/* Arcade title */
+.arcade-title {
+    color: #ffff00;
+    text-shadow: 
+        2px 2px 0 #ff1744,
+        4px 4px 0 #ff1744,
+        0 0 12px #ffff00;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+/* Arcade subtitle */
+.arcade-subtitle {
+    color: #00d4ff;
+    text-shadow: 0 0 8px #00d4ff;
+}
+
+/* Arcade info box */
+.arcade-info {
+    background-color: #151933;
+    border: 4px solid #00d4ff;
+    color: #ffffff;
+    box-shadow: 
+        inset -2px -2px 0 rgba(0, 80, 100, 0.4),
+        inset 2px 2px 0 rgba(0, 212, 255, 0.2),
+        0 0 16px rgba(0, 212, 255, 0.3);
+}
+
+/* Arcade modal */
+.arcade-modal {
+    background-color: #0a0e27;
+    border: 6px solid #ffffff;
+    box-shadow: 
+        0 0 24px #ff1744,
+        0 0 40px rgba(255, 23, 68, 0.4),
+        inset -3px -3px 0 rgba(0, 0, 0, 0.6),
+        inset 3px 3px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Bingo celebration text */
+.bingo-text {
+    color: #ffff00;
+    text-shadow: 
+        2px 2px 0 #ff1744,
+        4px 4px 0 #ff1744,
+        0 0 16px #ffff00;
+    animation: bingo-celebrate 0.6s ease-in-out;
+}
+
+/* Alert banner */
+.arcade-alert {
+    background-color: #241800;
+    border-top: 4px solid #ffff00;
+    border-bottom: 4px solid #ffff00;
+    color: #ffff00;
+    box-shadow: 0 0 16px rgba(255, 255, 0, 0.3);
 }
