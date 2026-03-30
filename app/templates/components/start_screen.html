@@ -1,25 +1,15 @@
 <div id="game-container">
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm arcade-cabinet p-8">
-        <h1 class="text-5xl font-bold arcade-title mb-2">SOC OPS</h1>
-        <p class="text-lg arcade-subtitle mb-8">SOCIAL BINGO</p>
-
-        <div class="arcade-info rounded p-6 mb-8">
-            <h2 class="font-semibold text-white mb-3 text-lg">HOW TO PLAY</h2>
-            <ul class="text-left text-white text-sm space-y-2">
-                <li>• FIND PEOPLE WHO MATCH</li>
-                <li>• TAP A SQUARE WHEN YOU MATCH</li>
-                <li>• GET 5 IN A ROW TO WIN!</li>
-            </ul>
+    <div class="start-screen">
+        <div class="start-inner">
+            <h1 class="start-title">SOC OPS</h1>
+            <p class="start-tagline">Social Bingo for the SOC</p>
+            <button
+                class="start-btn"
+                hx-post="/start"
+                hx-target="#game-container"
+                hx-swap="outerHTML">
+                <span class="start-btn-text">Start Game</span>
+            </button>
         </div>
-
-        <button
-            hx-post="/start"
-            hx-target="#game-container"
-            hx-swap="outerHTML"
-            class="w-full arcade-button-yellow py-4 px-8 text-lg">
-            START GAME
-        </button>
     </div>
-</div>
 </div>
