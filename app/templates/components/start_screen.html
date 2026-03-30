@@ -1,25 +1,87 @@
 <div id="game-container">
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm arcade-cabinet p-8">
-        <h1 class="text-5xl font-bold arcade-title mb-2">SOC OPS</h1>
-        <p class="text-lg arcade-subtitle mb-8">SOCIAL BINGO</p>
+<div class="hero-container">
 
-        <div class="arcade-info rounded p-6 mb-8">
-            <h2 class="font-semibold text-white mb-3 text-lg">HOW TO PLAY</h2>
-            <ul class="text-left text-white text-sm space-y-2">
-                <li>• FIND PEOPLE WHO MATCH</li>
-                <li>• TAP A SQUARE WHEN YOU MATCH</li>
-                <li>• GET 5 IN A ROW TO WIN!</li>
-            </ul>
+    <!-- Ambient glow orbs -->
+    <div class="hero-glow-orb hero-glow-orb-1"></div>
+    <div class="hero-glow-orb hero-glow-orb-2"></div>
+    <div class="hero-glow-orb hero-glow-orb-3"></div>
+
+    <div class="hero-content">
+
+        <!-- Event context badge -->
+        <div class="hero-event-badge">⚡ MIXER EVENT GAME</div>
+
+        <!-- Brand label above headline -->
+        <div class="hero-brand-label">SOC OPS</div>
+
+        <!-- Main hero headline -->
+        <h1 class="hero-main-title">SOCIAL<br>BINGO</h1>
+
+        <!-- Subtitle -->
+        <p class="hero-subtitle">THE ULTIMATE ICE-BREAKER FOR<br>SECURITY PROFESSIONALS</p>
+
+        <!-- Description -->
+        <p class="hero-description">
+            Connect with your team, discover shared experiences,
+            and turn networking into a game at your next event.
+        </p>
+
+        <!-- Stats row -->
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-number">25</span>
+                <span class="hero-stat-label">SQUARES</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">5×5</span>
+                <span class="hero-stat-label">GRID</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">∞</span>
+                <span class="hero-stat-label">CONNECTIONS</span>
+            </div>
         </div>
 
+        <!-- Primary CTA -->
         <button
             hx-post="/start"
             hx-target="#game-container"
             hx-swap="outerHTML"
-            class="w-full arcade-button-yellow py-4 px-8 text-lg">
-            START GAME
+            class="hero-cta-button arcade-button-yellow">
+            ▶ START GAME
         </button>
+
+        <!-- Divider -->
+        <div class="hero-divider">
+            <span class="hero-divider-text">HOW TO PLAY</span>
+        </div>
+
+        <!-- How to play section -->
+        <div class="hero-how-to-play arcade-info p-4">
+            <div class="hero-how-to-play-title">
+                <span>📋</span>
+                <span>HOW TO PLAY</span>
+            </div>
+            <div class="hero-steps">
+                <div class="hero-step">
+                    <span class="hero-step-num">1</span>
+                    <span class="hero-step-text">MINGLE &amp; FIND PEOPLE WHO MATCH EACH SQUARE</span>
+                </div>
+                <div class="hero-step">
+                    <span class="hero-step-num">2</span>
+                    <span class="hero-step-text">TAP A SQUARE WHEN YOU FIND A MATCH</span>
+                </div>
+                <div class="hero-step">
+                    <span class="hero-step-num">3</span>
+                    <span class="hero-step-text">GET 5 IN A ROW — ROW, COLUMN, OR DIAGONAL</span>
+                </div>
+                <div class="hero-step">
+                    <span class="hero-step-num">★</span>
+                    <span class="hero-step-text">CENTER IS A FREE SPACE — YOU'RE ALREADY ON YOUR WAY!</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 </div>
